@@ -12,17 +12,17 @@ import {IDeployN20Data, IMintN20Data} from "./types";
 import {stringToBytes} from "./utils";
 
 const bitwork = "20";
-const tick = "NOTE";
+const tick = "FIGHT";
 
 const deployData: IDeployN20Data = {
   p: "n20",
   op: "deploy",
   tick,
   max: 2100n * 10000n * 10n ** 8n,
-  lim: 5000n * 10n ** 8n,
+  lim: 16384n * 10n ** 8n,
   dec: 8,
   sch: "50b13619d4d936d7c5c7fb7dfbe752e33b85b33774e9e2b3779f16791fb1c749",
-  start: 27530, //start height
+  start: 854555, //start height
   bitwork: stringToBytes(bitwork), //tx must start with bitwork
 };
 
@@ -30,7 +30,7 @@ const mintData: IMintN20Data = {
   p: "n20",
   op: "mint",
   tick,
-  amt: 5000n * 10n ** 8n,
+  amt: 16384n * 10n ** 8n,
 };
 
 //NOTICE: deploy a new token with n20-pow contract, write your own deploy function
